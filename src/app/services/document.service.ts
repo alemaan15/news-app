@@ -9,27 +9,22 @@ import { Observable } from 'rxjs';
 export class DocumentServive {
   constructor(private readonly http: HttpClient) {}
 
+  apiUrl = 'http://localhost:3000/api/documents';
+
   getNewDocuments(): Observable<DocumentModel[]> {
-    return this.http.get<DocumentModel[]>(
-      `http://localhost:3000/api/documents/new`
-    );
+    return this.http.get<DocumentModel[]>(`${this.apiUrl}/new`);
   }
 
   getArchivedDocuments(): Observable<DocumentModel[]> {
-    return this.http.get<DocumentModel[]>(
-      `http://localhost:3000/api/documents/archived`
-    );
+    return this.http.get<DocumentModel[]>(`${this.apiUrl}/archived`);
   }
 
   archiveDocument(id: string): Observable<DocumentModel> {
-    return this.http.put<DocumentModel>(
-      `http://localhost:3000/api/documents/${id}/archive`,
-      {}
-    );
+    return this.http.put<DocumentModel>(`${this.apiUrl}/${id}/archive`, {});
   }
 
   removeDocument(id: string): Observable<void> {
-    return this.http.delete<void>(`http://localhost:3000/api/documents
+    return this.http.delete<void>(`${this.apiUrl}
 /${id}`);
   }
 }
