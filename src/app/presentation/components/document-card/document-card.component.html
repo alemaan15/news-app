@@ -1,0 +1,32 @@
+<div class="news-card">
+  <h2 class="news-title">{{ cardData.title }}</h2>
+  <p class="news-description">{{ cardData.description }}</p>
+  <div class="news-meta">
+    <span class="news-date">{{ cardData.date | date : "longDate" }}</span>
+    <span class="news-author">By {{ cardData.author }}</span>
+  </div>
+  <div class="news-content">{{ cardData.content }}</div>
+  <div class="news-footer">
+    @if(cardData.archiveDate){
+    <div class="archive-section">
+      <span class="news-archive-date"
+        >Archived on: {{ cardData.archiveDate | date : "longDate" }}</span
+      >
+      <button
+        class="delete-button"
+        (click)="deleteDocumentHandler(cardData._id ?? ' ')"
+      >
+        Delete
+      </button>
+    </div>
+
+    } @else {
+    <button
+      class="news-archive-button"
+      (click)="archiveDocumentHandler(cardData._id ?? '')"
+    >
+      Archive
+    </button>
+    }
+  </div>
+</div>

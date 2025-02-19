@@ -1,0 +1,11 @@
+<div class="document-container">
+  @if(newDocuments.length !== 0){ @for(document of newDocuments; track
+  document._id){
+  <app-document-card
+    [cardData]="document"
+    (archiveDocument)="archiveDocumentAction($event)"
+  ></app-document-card>
+  } } @else{
+  <p class="no-documents">No new documents</p>
+  }
+</div>

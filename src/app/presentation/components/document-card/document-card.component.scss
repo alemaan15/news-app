@@ -1,0 +1,79 @@
+.news-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin: 16px 0;
+  max-width: 600px;
+  border-left: 5px solid #007bff;
+}
+
+.news-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.news-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.news-meta {
+  font-size: 0.875rem;
+  color: #888;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.news-content {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.news-footer {
+  font-size: 0.875rem;
+  color: #888;
+  margin-top: 12px;
+  text-align: right;
+}
+
+.news-archive-date {
+  font-style: italic;
+}
+
+.archive-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.delete-button {
+  background-color: #f44336; /* Rojo */
+  color: white;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #da190b;
+}
+
+.news-archive-button {
+  background-color: #4caf50; /* Verde */
+  color: white;
+}
+
+.news-archive-button:hover {
+  background-color: #45a049;
+}

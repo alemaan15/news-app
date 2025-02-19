@@ -1,0 +1,11 @@
+<div class="document-container">
+  @if(archivedDocuments.length !== 0){ @for(document of archivedDocuments; track
+  document){
+  <app-document-card
+    [cardData]="document"
+    (removeDocument)="deleteDocumentAction($event)"
+  ></app-document-card>
+  } } @else{
+  <p>No archived documents</p>
+  }
+</div>
